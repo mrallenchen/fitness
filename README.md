@@ -12,6 +12,8 @@ Methodology:
 
 ## Data
 
+# TO-DO <- IMPORT MORE DATA <- TUESDAY
+
 ### Source
 - Downloaded data from the National Health and Nutrition Examination Survey (continuously conducted by CDC's National Center for Health Statistics) 
     - https://www.cdc.gov/nchs/nhanes/index.htm
@@ -26,23 +28,29 @@ Methodology:
 
 
 
-
+## A discussion on imbalanced problem
+- Three options here:
+    - Pre-processing - resampling:
+        - Undersampling: Not a great approach due to minimal data (to get the ratios reasonable, would result in reducing overall data size by a considerable amount because the )
+        - Oversampling: One concern with this approach is that oversampling prior to doing a validation loop (and not during) is that it would result in overfitting where a sample is both in the train set and the validation set. Unfortunately, this would not work well with sklearn's cross_validation. To implement this properly, the validation set would need to be held out from the oversampling for the train set. Unfortunately sklearn's cross_validation does not have this functionality, and therefore any cross validation or Grid Search (for best parameters) would need to be implemented manually. As such, this approach was tabled due to time constraints. It could be a further avenue to attempt in the future to compare this approach vs. others.
+        - Smote: Similar concern to the the oversampling technique, even though it would not be as drastic
+    - During Model - Class Weights:
+        - This one is easy to implement and makes sense for the multi-class model, by putting additional weight on the classifications that are of more interest but infrequent "athlete" and "fitness"
+    - After Model - Threshold Adjustment:
+        - This approach would depend on the model is not easy to implement under a multi-class model, where the classifier selects the class with the highest probability. To attempt a threshold adjustment would require building model logic from scratch and overwriting the class selection, such that some classes (given certain thresholds) would be selected in favor of others with higher probabilities. Due to the model complexity (in building and explaining) this approach was not attempted.
 
 ### Pre-processing
-- histogram shows there is an imbalanced problem
-
-# **TO-DO: need to oversample**
-
-**add discussion on undersampling, vs oversampling vs mixture**
-
+ - No resampling was done for this project
 
 ### Scoring
 - I care about precision... "if you do this, then outcome will definitely happen."
 - for cross_validation. choosing the one with the best balanced_precision
 
-# **CURRENT BLOCKER HOW TO SET SCORING FOR MULTICLASS in corss_vlaidate. I tried precision_macro, but this generates a warning"
-
 - **However, given time, would like to create my own scoring metric**
+
+### Feature Selection!
+
+# TO-DO ADD IN MORE FEATURES <- TUESDAY
 
 
 ### Algorithms
@@ -50,13 +58,25 @@ Methodology:
 - Step 2: Tune each algorithm, using CV, and find best parameters according to scoring metric
     - Decision Tree
     - KNNeighbors
+        - good for multiclass
     - Logistic regression
+        - 
     - RandomForest
     - XGBoost
+    - Naive Bayes
+        -note: for continuous and binary, will likely need to take continuous and bin it so you can binarize
+        - good for bernoulli data; lots of features and minimal rows/observations
+        - text class: good for multinomial Bayes
+        - Naive bayes - good classifier, bad predictors -> bad proba. aka... predictions are good, but probablilies are not.
 - Step 3: Compare across all of the models to choose the best Algorithm
 
 
 ## Deliverables
+# To-Do: Webapp <- Thursday to Sunday
+# TO-DO: PRESENTATION <- FRIDAY- MONDAY
+
+# To-DO: Code-cleanup <- TUESDAY
+
 
 
 ## Tools
