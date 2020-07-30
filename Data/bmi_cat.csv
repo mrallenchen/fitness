@@ -1,0 +1,5 @@
+BMI_category,low,high
+Underweight,0,18.5
+Normal,18.5,25
+Overweight,25,30
+Obese,30,99
