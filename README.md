@@ -140,12 +140,17 @@ Plotly - dendrogram
 
 
 ## Tools
-- xport (version 3.2.1): for working with .XPT files (SAS output files used by the government). Converted the xport files to csv
+
 - postgress - for setting up the database and SQL query
 - pgadmin4 - for testing sql queries
-- psycopg2 - Python-PostgreSQL Database Adapter
-- pandas
-
+- python packages
+    - psycopg2 - Python-PostgreSQL Database Adapter
+    - pandas
+    - xport (version 3.2.1): for working with .XPT files (SAS output files used by the government). Converted the xport files to csv
+    - markdown
+    - sklearn
+    - seaborn
+    - matplotlib
 
 ## Other References
 [Body Fat Norms by American Counsel on Exercise](https://www.acefitness.org/education-and-resources/lifestyle/tools-calculators/percent-body-fat-calculator/)
