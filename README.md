@@ -127,13 +127,13 @@ https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-cl
 
 
 ## Deliverables
-# To-Do: Webapp <- 
+# To-Do: Webapp/Visualization <- Sunday
 Plotly tree Map <- this is where I wanna be...
 Plotly - dendrogram
 
 
 
-# TO-DO: PRESENTATION <- FRIDAY- MONDAY
+# TO-DO: PRESENTATION <- MONDAY
 
 # To-DO: Code-cleanup <- TUESDAY
 
@@ -141,13 +141,13 @@ Plotly - dendrogram
 
 ## Tools
 
-- postgress - for setting up the database and SQL query
-- pgadmin4 - for testing sql queries
-- python packages
+- SQL
+    - postgress - for setting up the database and SQL query
+    -  pgadmin4 - for testing sql queries
+- Python libraries
     - psycopg2 - Python-PostgreSQL Database Adapter
     - pandas
     - xport (version 3.2.1): for working with .XPT files (SAS output files used by the government). Converted the xport files to csv
-    - markdown
     - sklearn
     - seaborn
     - matplotlib
@@ -156,6 +156,8 @@ Plotly - dendrogram
 [Body Fat Norms by American Counsel on Exercise](https://www.acefitness.org/education-and-resources/lifestyle/tools-calculators/percent-body-fat-calculator/)
 
 [Alternative view of bf%:](https://www.fitnescity.com/blog/body-fat-percentage-chart)
+
+
 [BMI categories per CDC](https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html)
 
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6356293/
