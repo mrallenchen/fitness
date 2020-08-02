@@ -2,6 +2,8 @@
 
 # Fitness: Diet and Exercise -> Body Type
 
+
+
 ## Design
 **Background**
 
@@ -62,8 +64,6 @@ https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html
 
 - Actually both are important... I don't want to be missing any viable strategies to achieving a good weight. (So that people can choose which way they want to do things or get mad that they are an exception to my model)
 - Will opt for F1 metric.
-    - Also want t
-
 - do care about ROC-AUC for how good a model generally is
 - and then use a ROC
 
@@ -73,6 +73,8 @@ https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html
 https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/#:~:text=Generally%2C%20the%20use%20of%20ROC,moderate%20to%20large%20class%20imbalance.
 
 On a single metric - want to look at F1
+https://neptune.ai/blog/f1-score-accuracy-roc-auc-pr-auc
+https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-imbalanced-classification/
 
 
 ## Modeling
@@ -125,7 +127,12 @@ https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-cl
 
 
 ## Deliverables
-# To-Do: Webapp <- Thursday to Sunday
+# To-Do: Webapp <- 
+Plotly tree Map <- this is where I wanna be...
+Plotly - dendrogram
+
+
+
 # TO-DO: PRESENTATION <- FRIDAY- MONDAY
 
 # To-DO: Code-cleanup <- TUESDAY
