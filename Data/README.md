@@ -1,4 +1,16 @@
 
+### Data Collection
+
+Downloaded data from the National Health and Nutrition Examination Survey (continuously conducted by CDC's National Center for Health Statistics) \
+- https://www.cdc.gov/nchs/nhanes/index.htm \
+- Survey cycles collected for NHANES data : 2011-2012, 2013-2014, 2015-2016, 2017-2018\
+- Additional detail on Data Collection methodology shown in [Data Collection and EDA Notebook](../Data_Collection_EDA.ipynb)
+
+
+Also collected information on Weight Status and Fitness Status, from other sources
+
+
+### I. Tables in the SQL Database
 
 | Table | Title | Primary Data| Source |
 | --- | ---- | ---- | ----- |
@@ -13,6 +25,4 @@
 | **WHQ**| [Weight History (WHQ_J)](https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/WHQ_J.htm) | Self image, weight history, weight loss strategies e.g. skipping meals, eat less, diet, weight loss program, laxatives |  CDC - NHANES |
 
 
-CDC - NHANES
-- https://www.cdc.gov/nchs/nhanes/index.htm
-- Survey cycles collected for NHANES data : 2011-2012, 2013-2014, 2015-2016, 2017-2018
+

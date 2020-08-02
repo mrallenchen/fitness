@@ -2,8 +2,6 @@
 
 # Fitness: Diet and Exercise -> Body Type
 
-
-
 ## Design
 **Background**
 
@@ -13,7 +11,33 @@
 
 Another question: Is BMI or body fat % a better metric? Can answer this by seeing how well correlated exercise
 
-Methodology:
+## Methodology:
+1. Collect Data
+    - Store in SQL database
+2. Explore Data
+3. Select Scoring
+    1. F1 score
+
+
+4. Modeling Loop:
+    1. Features: Select Features
+    2. Modeling Loop 1:
+        - Mini-loop:
+            - Pre-processing: Sampling Methods
+            - Cross-Validation
+            - Grid Search for best hyper parameters
+        - Compare Models
+            - compare models by scoring metric
+            - send back to feature selection
+    3. Modeling Loop 2 (Given features, Top 2 models):
+        - Sampling technique
+        - Graphical options:
+            - Confusion Matrix
+            - PR-AUC graph
+            - Feature Importance / Coefficients
+    4. Ensemble?
+        - Save this technique for later
+5. 
 
 ## Data
 
@@ -40,17 +64,6 @@ https://www.cdc.gov/healthyweight/assessing/bmi/adult_bmi/index.html
         - [Dietary Interview (Dr1TOT_J)](https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/DR1TOT_J.htm)
 
 
-
-## A discussion on imbalanced problem
-- Three options here:
-    - Pre-processing - resampling:
-        - Undersampling: Not a great approach due to minimal data (to get the ratios reasonable, would result in reducing overall data size by a considerable amount because the )
-        - Oversampling: One concern with this approach is that oversampling prior to doing a validation loop (and not during) is that it would result in overfitting where a sample is both in the train set and the validation set. Unfortunately, this would not work well with sklearn's cross_validation. To implement this properly, the validation set would need to be held out from the oversampling for the train set. Unfortunately sklearn's cross_validation does not have this functionality, and therefore any cross validation or Grid Search (for best parameters) would need to be implemented manually. As such, this approach was tabled due to time constraints. It could be a further avenue to attempt in the future to compare this approach vs. others.
-        - Smote: Similar concern to the the oversampling technique, even though it would not be as drastic
-    - During Model - Class Weights:
-        - This one is easy to implement and makes sense for the multi-class model, by putting additional weight on the classifications that are of more interest but infrequent "athlete" and "fitness"
-    - After Model - Threshold Adjustment:
-        - This approach would depend on the model is not easy to implement under a multi-class model, where the classifier selects the class with the highest probability. To attempt a threshold adjustment would require building model logic from scratch and overwriting the class selection, such that some classes (given certain thresholds) would be selected in favor of others with higher probabilities. Due to the model complexity (in building and explaining) this approach was not attempted.
 
 ## Feature Engineering
 - Do I need to make anything One-hot?
