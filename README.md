@@ -16,9 +16,8 @@ Another question: Is BMI or body fat % a better metric? Can answer this by seein
     - Store in SQL database
 2. Explore Data
 3. Select Scoring
-    1. F1 score
-
-
+    1. F1 score (macro and F1_fitness)
+    2. PR AUC (micro and for fitness)
 4. Modeling Loop:
     1. Features: Select Features
     2. Modeling Loop 1:
@@ -37,7 +36,8 @@ Another question: Is BMI or body fat % a better metric? Can answer this by seein
             - Feature Importance / Coefficients
     4. Ensemble?
         - Save this technique for later
-5. 
+5. Production
+    1. Tree Map
 
 ## Data
 
