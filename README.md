@@ -114,11 +114,15 @@ https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-im
 - Step 2: Tune each algorithm, using CV, and find best parameters according to scoring metric
     - Big 3 for classification: XGBoost, Random Forest, logisitic Regression
     - Big 4 for regression??: Poission regression great for count data, Linear regression / XGBoost regression , Time Series regression (ARIMA)
+
+
+
     - Decision Tree
+        - class weight available
     - KNNeighbors
-        - good for multiclass
+        - good for multiclass (no class weight available)
     - Logistic regression
-        - 
+        - class weight available
     - RandomForest (bagging)
         - can get feature importance, hard to interpret trees
          - not great for regression (slow, gradient boosted regressino will be better though)
@@ -130,8 +134,9 @@ https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-im
         - good for bernoulli data; lots of features and minimal rows/observations
         - text class: good for multinomial Bayes
         - Naive bayes - good classifier, bad predictors -> bad proba. aka... predictions are good, but probablilies are not.
-    - xgBoost
-    - softmax?
+    - BernoulliNB
+    - ComplementNB
+
 - Step 3: Compare across all of the models to choose the best Algorithm
 
 Note: 

@@ -21,6 +21,7 @@ from sklearn.model_selection import ParameterGrid
 from sklearn.model_selection import StratifiedKFold
 import xgboost as xgb
 import pandas as pd
+from sklearn.metrics import classification_report
 
 #helper function
 def fold_mod_transform(scores,num):
@@ -133,8 +134,12 @@ def SamplingGridSearchCV(resampler, model, X_train, y_train, param_grid, folds=5
                 #train_score = custom_score(y_tr, model.predict_proba(X_tr))
                 #val_score = custom_score(y_val, model.predict_proba(X_val))
                 
-                train_score = PR_AUC_fitness(y_tr, model.predict_proba(X_tr))
-                val_score = PR_AUC_fitness(y_val, model.predict_proba(X_val))
+                
+                train_class = classification_report(y_tr, model.predict(X_tr), target_names = ['Athlete','Average','Fitness','Obese'], output_dict = True, zero_division=0)
+                val_class = classification_report(y_val, model.predict(X_val), target_names = ['Athlete','Average','Fitness','Obese'], output_dict = True,zero_division=0)
+                
+                train_score = train_class['Fitness']['f1-score']
+                val_score = val_class['Fitness']['f1-score']
                 
                 
                 
