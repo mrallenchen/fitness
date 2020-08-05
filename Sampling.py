@@ -1,5 +1,5 @@
 #Create KFOLD GRIDSEARCH WITH SAMPLING TECHNIQUES.
-#return best model based on F1 score, average = "macro"
+#return best model based on F1 score for the fitness class, average = "macro"
 
 from sklearn.model_selection import cross_validate
 from sklearn.model_selection import GridSearchCV
