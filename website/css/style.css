@@ -1,9 +1,0 @@
-/* Within the `body` tag, adjust the `background` with the value `lightblue`  */
-body {
-    background: lightblue;
-}
-
-/* Also, set a background for any Header 1 (h1) tag */
-h1 {
-    background: blue;
-}
